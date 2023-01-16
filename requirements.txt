@@ -3,7 +3,7 @@ pandas==1.4.2
 numpy==1.23.4
 lightgbm==3.3.3 
 scikit-learn==1.0.2
-
+feature_engine==1.5.2 
 
 
 
