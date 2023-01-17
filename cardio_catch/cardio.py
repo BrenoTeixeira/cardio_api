@@ -35,7 +35,7 @@ class Cardio(object):
 
     ### TRANSFORMATION ###
     def transformation(self, test):
-        new_cols = ['id', 'age', 'gender', 'height', 'weight', 'systolic_pressure', 'diastolic_pressure', 'cholesterol', 'glucose', 'smoke', 'alcohol_intake', 'active', 'cardio_disease']
+        new_cols = ['id', 'age', 'gender', 'height', 'weight', 'systolic_pressure', 'diastolic_pressure', 'cholesterol', 'glucose', 'smoke', 'alcohol_intake', 'active']
 
         test.columns = new_cols
 
@@ -78,6 +78,6 @@ class Cardio(object):
         test = test.query('height > 65.24')
 
 
-        X_test = test.drop('cardio_disease', axis=1)
+        X_test = test.copy()
     
         return X_test
