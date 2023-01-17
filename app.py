@@ -4,9 +4,9 @@ import pandas as pd
 from cardio_catch.cardio import Cardio
 import json
 
-app = Flask(__name__)
-
 model_pipeline = pickle.load(open('model/lgbm_classifier_tuned_pipe.pkl', 'rb'))
+
+app = Flask(__name__)
 
 @app.route('/predictions', methods=['POST'])
 
